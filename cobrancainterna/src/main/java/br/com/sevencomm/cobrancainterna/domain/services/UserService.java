@@ -44,7 +44,7 @@ public class UserService implements IUserService {
 
         User user = new User();
         user.setNomeCompleto(signUpDTO.getNomeCompleto());
-        user.setUsername(signUpDTO.getUsername());
+        user.setLogin(signUpDTO.getLogin());
         user.setEmail(signUpDTO.getEmail());
         user.setSenha(bCryptPasswordEncoder.encode(signUpDTO.getSenha()));
 

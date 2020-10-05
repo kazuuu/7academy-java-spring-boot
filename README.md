@@ -1,6 +1,8 @@
 # 7comm-java-spring-boot
 RESTful Web Service with Spring Boot and Clean Architecture
 
+OBS: Este é um projeto é didatico com objetivo de transformar um estudante de programação em um programador profissional.
+
 ## Projeto realizado para o curso de Java da 7Academy ##
 
 Neste projeto, estamos utilizando o framework Spring Boot Web para desenvolvermos uma Rest API.

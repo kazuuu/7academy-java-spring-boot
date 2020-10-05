@@ -15,7 +15,7 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String username;
+    private String login;
     private String senha;
     private String nomeCompleto;
     private String email;
@@ -38,7 +38,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return username;
+        return login;
     }
 
     @Override
@@ -60,4 +60,5 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
 }

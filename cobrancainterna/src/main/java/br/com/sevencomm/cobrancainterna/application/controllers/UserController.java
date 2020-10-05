@@ -41,7 +41,6 @@ public class UserController {
     @PostMapping("/sign-up")
     public ResponseEntity<Object> signUp(@RequestBody SignUpDTO signUpDTO) {
         try {
-
             User user = userService.SignUp(signUpDTO);
 
             return ResponseEntity.ok(user);
@@ -50,4 +49,5 @@ public class UserController {
             return ResponseEntity.badRequest().body(ex.getMessage());
         }
     }
+
 }
