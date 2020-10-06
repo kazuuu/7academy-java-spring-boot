@@ -9,7 +9,7 @@
 			"name": "Authentication",
 			"item": [
 				{
-					"name": "OAuth Login",
+					"name": "Login",
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -25,8 +25,7 @@
 							{
 								"key": "Content-Type",
 								"type": "text",
-								"value": "application/x-www-form-urlencoded",
-								"disabled": true
+								"value": "application/x-www-form-urlencoded"
 							},
 							{
 								"key": "Accept",
@@ -36,56 +35,16 @@
 							}
 						],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "scope",
-									"value": "mobile",
-									"type": "text"
-								},
-								{
-									"key": "client_id",
-									"value": "lets_ranking",
-									"type": "text",
-									"disabled": true
-								},
-								{
-									"key": "secret original\n",
-									"value": "202010012345",
-									"type": "text",
-									"disabled": true
-								},
-								{
-									"key": "secret novo",
-									"value": "2020061812345",
-									"type": "text",
-									"disabled": true
-								},
-								{
-									"key": "username",
-									"value": "first",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "abc",
-									"type": "text"
-								},
-								{
-									"key": "grant_type",
-									"value": "password",
-									"type": "text"
-								}
-							]
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"primeiro\",\n    \"password\": \"123\"\n}"
 						},
 						"url": {
-							"raw": "{{host1}}/oauth/token",
+							"raw": "{{host1}}/login",
 							"host": [
 								"{{host1}}"
 							],
 							"path": [
-								"oauth",
-								"token"
+								"login"
 							]
 						}
 					},
@@ -107,7 +66,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"primeiro\",\n    \"nomeCompleto\": \"Primeiro Usuario\",\n    \"senha\": \"1234\",\n    \"email\": \"primeiro@7comm.com.br\"\n}"
+							"raw": "{\n    \"login\": \"primeiro\",\n    \"nomeCompleto\": \"Primeiro Usuario\",\n    \"senha\": \"123\",\n    \"email\": \"primeiro@7comm.com.br\"\n}"
 						},
 						"url": {
 							"raw": "{{host1}}/user/sign-up",
@@ -220,7 +179,7 @@
 	],
 	"variable": [
 		{
-			"id": "1de7ac67-ff36-43be-92cb-3ab98f244bc9",
+			"id": "76bd97bb-c799-4837-8f2c-001515717dc9",
 			"key": "host1",
 			"value": "http://localhost:8080"
 		}

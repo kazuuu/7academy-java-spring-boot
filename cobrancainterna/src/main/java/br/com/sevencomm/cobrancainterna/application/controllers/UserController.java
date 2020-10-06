@@ -4,6 +4,7 @@ import br.com.sevencomm.cobrancainterna.application.dto.SignUpDTO;
 import br.com.sevencomm.cobrancainterna.domain.interfaces.IUserService;
 import br.com.sevencomm.cobrancainterna.domain.models.User;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
