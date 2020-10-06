@@ -1,7 +1,7 @@
 # 7comm-java-spring-boot
 RESTful Web Service with Spring Boot and Clean Architecture
 
-OBS: Este é um projeto é didatico realizado pela 7Academy - centro de treinamentos da 7COMm.
+OBS: Este é um projeto é didatico do curso de Java formatado e ministrado por Marcello Kazuo do centro de treinamentos da 7COMm.
 
 ## Etapa 1 - Arquitetura Base com Basic Authentication ##
 Para não complicarmos nesta etapa estamos utilizando o método de autentição Basic Authentication através do Spring Security. Isso significa que todas rotas estão seguras, porém a autorização de acesso da API é passado em cada requisição com login e senha. Não há um processo de autenticação (login) para receber o token de autorização.
