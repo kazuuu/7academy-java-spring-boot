@@ -1,7 +1,7 @@
 # 7comm-java-spring-boot
 RESTful Web Service with Spring Boot and Clean Architecture
 
-OBS: Este é um projeto é didatico realizado pela 7Academy - centro de treinamentos da 7COMm.
+OBS: Este é um projeto é didatico do curso de Java formatado e ministrado por Marcello Kazuo do centro de treinamentos da 7COMm.
 
 ## Etapa 2 - Arquitetura Base com JWT ##
 Nesta etapa foi alterado o método de autenticação do Spring Security de Basic Authentication para JWT. 
