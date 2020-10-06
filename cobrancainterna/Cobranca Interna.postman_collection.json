@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "2a3a168c-53ef-40e2-986e-e1355eea2ebe",
+		"name": "Cobranca Interna",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic bGV0c19yYW5raW5nOjIwMjAxMDAxMjM0NQ==",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"primeiro\",\n    \"password\": \"123\"\n}"
+						},
+						"url": {
+							"raw": "{{host1}}/login",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign Up",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"login\": \"primeiro\",\n    \"nomeCompleto\": \"Primeiro Usuario\",\n    \"senha\": \"123\",\n    \"email\": \"primeiro@7comm.com.br\"\n}"
+						},
+						"url": {
+							"raw": "{{host1}}/user/sign-up",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"user",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host1}}/user/get-user?userId=1",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"user",
+								"get-user"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "basic Z2FicmllbDoxMjM=",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{host1}}/user/get-current-user",
+							"host": [
+								"{{host1}}"
+							],
+							"path": [
+								"user",
+								"get-current-user"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "1234",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "primeiro",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "fff0462d-7e40-460c-88eb-f4607245e423",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "05a3b1bf-9780-4992-abdb-35281491c726",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "76bd97bb-c799-4837-8f2c-001515717dc9",
+			"key": "host1",
+			"value": "http://localhost:8080"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
